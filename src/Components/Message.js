@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // npm i @emailjs/browser
 
-const Practice = () => {
+const Message = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -41,8 +41,8 @@ const Practice = () => {
         {/* <label>Email</label> */}
         {/* <input type="email" name="user_email" /> */}
         {/* <label>Message</label> */}
-        <textarea name="message" />
-        <input type="submit" value="Send" />
+        <textarea name="message" placeholder="Write here"/>
+        <input className=" inputClassMessage mt-3" type="submit" value="Send" />
       </form>
     </StyledContactForm>
 
@@ -52,7 +52,7 @@ const Practice = () => {
   );
 };
 
-export default Practice;
+export default Message;
 
 // Styles
 const StyledContactForm = styled.div`
@@ -67,17 +67,41 @@ const StyledContactForm = styled.div`
     font-size: 16px;
 
     input {
-      width: 100%;
+      width: 20%;
       height: 35px;
       padding: 7px;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
-
+    
+      
       &:focus {
         border: 2px solid rgba(0, 206, 158, 1);
       }
     }
+
+.inputClassMessage{
+    margin: auto;
+    border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding: auto;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.inputClassMessage:hover{
+    background-color: #6b59d3;
+    transform: scale(1.1);
+    font-size:20px;
+    padding-bottom: 25px;
+}
 
     textarea {
       max-width: 100%;
@@ -105,6 +129,7 @@ const StyledContactForm = styled.div`
       background: rgb(249, 105, 14);
       color: white;
       border: none;
+     
     }
   }
 `;

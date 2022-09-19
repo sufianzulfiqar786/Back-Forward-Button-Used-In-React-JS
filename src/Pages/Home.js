@@ -6,6 +6,7 @@ import { Row, Col, Button, FormGroup, Label, Input } from "reactstrap";
 import '../CSS/Home.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Message from '../Components/Message'
 
 const ActionButtons = (props) => {
     const handleBack = () => {
@@ -305,7 +306,8 @@ const Four = (props) => {
                                 </div>
                                 <div className="comment-box">
                                     <p><i className="fas fa-comments"></i> Write Somthing note</p>
-                                    <textarea name="full_comments" placeholder="Write here"></textarea>
+                                    {/* <textarea name="full_comments" placeholder="Write here"></textarea> */}
+                                    <Message  />
                                 </div>
                             </div>
                         </div>
@@ -642,7 +644,7 @@ const Home = () => {
 
             <div className="fluid-container">
 
-                <div className="row row1st m-0 p-0 ">
+                <div className="row row1st m-0 p-0 " id="row1st">
 
                     <div className="col-3 m-0 p-0 position-fixed">
 
